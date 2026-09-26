@@ -1,0 +1,86 @@
+.island-wrap {
+  position: fixed;
+  top: var(--space-20);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.island-wrap .island {
+  pointer-events: auto;
+}
+
+.island {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  border-radius: var(--radius-pill);
+  background: var(--chrome-fill);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.island button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-mid);
+  font-size: var(--text-13);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.01em;
+  padding: var(--space-9) var(--space-18);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.island button.active {
+  background: var(--glass-fill-strong);
+  color: var(--text-hi);
+}
+
+.island button:hover {
+  color: var(--text-hi);
+}
+
+.island button:focus-visible {
+  outline: 2px solid var(--text-hi);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .island button {
+    padding: var(--space-8) var(--space-16);
+    font-size: var(--text-12);
+  }
+}
+
+@media (max-width: 640px) {
+  .island-wrap {
+    top: var(--space-12);
+  }
+
+  .island {
+    gap: var(--space-2);
+    padding: var(--space-6);
+  }
+
+  .island button {
+    padding: var(--space-6) var(--space-12);
+    font-size: var(--text-11);
+    min-height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

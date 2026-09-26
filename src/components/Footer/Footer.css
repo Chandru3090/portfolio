@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-20) var(--space-20) var(--space-32);
+}
+
+.footer p {
+  font-size: var(--text-13);
+  color: var(--text-lo);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--space-16) var(--space-12) var(--space-24);
+  }
+
+  .footer p {
+    font-size: var(--text-12);
+  }
+}
