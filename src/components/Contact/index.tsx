@@ -68,7 +68,7 @@ function Contact() {
         <div className="contact-grid">
           <Reveal delay={60}>
             <div className="glass-panel contact-form">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} noValidate>
                 <label>
                   <span className="label">Your name</span>
                   <input
